@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(milliseconds: 3500), () {
+    Future.delayed(Duration(milliseconds: 3200), () {
       SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
       // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.transparent,systemNavigationBarColor: Colors.transparent));
       // if(Api.auth != null){
@@ -24,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
       // }else{
       //   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginScreen())) ;
       // }
-      // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginScreen())) ;
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginScreen())) ;
     });
   }
 
@@ -34,25 +34,27 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: AppColors.theme['primaryColor'],
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Center(
-              child: Image.asset(
-                "assets/image/logos/se_logo.png",
-                height: 250,
-                width: 250,
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Center(
+                child: Image.asset(
+                  "assets/images/logos/se_logo.png",
+                  height:200,
+                  width: 200,
+                ),
               ),
-            ),
-            Center(
-              child: Image.asset(
-                "assets/image/logos/se_name.png",
-                height: 250,
-                width: 250,
+              Center(
+                child: Image.asset(
+                  "assets/images/logos/se_name.png",
+                  height: 100,
+                  width: 250,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
