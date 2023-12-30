@@ -1,10 +1,9 @@
-import 'package:flutter/material.dart' ;
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../main.dart';
 import '../utils/colors.dart';
 import 'auth/login.dart';
-
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -14,13 +13,11 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
   @override
-
-  void initState(){
-    super.initState() ;
-    Future.delayed(Duration(milliseconds: 2500),(){
-      SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge) ;
+  void initState() {
+    super.initState();
+    Future.delayed(Duration(milliseconds: 3200), () {
+      SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
       // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.transparent,systemNavigationBarColor: Colors.transparent));
       // if(Api.auth != null){
       //   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> HomeScreen())) ;
@@ -28,22 +25,38 @@ class _SplashScreenState extends State<SplashScreen> {
       //   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginScreen())) ;
       // }
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginScreen())) ;
-    }) ;
+    });
   }
-
 
   @override
   Widget build(BuildContext context) {
-
-    mq = MediaQuery.of(context).size ;
+    mq = MediaQuery.of(context).size;
     return Scaffold(
-        backgroundColor: AppColors.theme['primaryColor'],
-        body:Column(
-          children: [
-            Image.asset("assets/image/logos/se_logo.png",height: 250,width: 250,),
-            // Image.asset("assets/image/logos/",height: 250,width: 250,)
-          ],
-        )
+      backgroundColor: AppColors.theme['primaryColor'],
+      body: Center(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Center(
+                child: Image.asset(
+                  "assets/images/logos/se_logo.png",
+                  height:200,
+                  width: 200,
+                ),
+              ),
+              Center(
+                child: Image.asset(
+                  "assets/images/logos/se_name.png",
+                  height: 100,
+                  width: 250,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
