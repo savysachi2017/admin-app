@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:se_admin_app/screens/desktop_screens/login_desktop.dart';
+import 'package:se_admin_app/screens/mobile_screens/login_mobile.dart';
+import '../../main.dart';
+import '../../utils/colors.dart';
 
-import '../main.dart';
-import '../utils/colors.dart';
-import 'auth/login.dart';
 
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
+class SplashScreenDesktop extends StatefulWidget {
+  const SplashScreenDesktop({super.key});
 
   @override
-  State<SplashScreen> createState() => _SplashScreenState();
+  State<SplashScreenDesktop> createState() => _SplashScreenDesktopState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _SplashScreenDesktopState extends State<SplashScreenDesktop> {
   @override
   void initState() {
     super.initState();
@@ -24,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
       // }else{
       //   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginScreen())) ;
       // }
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginScreen())) ;
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginScreenDesktop())) ;
     });
   }
 

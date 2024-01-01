@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:se_admin_app/screens/splash_screen.dart';
+import 'package:se_admin_app/platform_define.dart';
 
 
 late Size mq ;
@@ -25,7 +25,7 @@ class _AdminAppState extends State<AdminApp> {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SplashScreen(),
+      home: PlatformDefine(),
     );
   }
 }
