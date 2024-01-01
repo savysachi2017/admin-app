@@ -17,6 +17,7 @@ class AppColors {
     "theme1": {
       "primaryColor":hexStringToColors("#272525"),
       "secondaryColor" :hexStringToColors("#fbf4f1"),
+      "tertiaryColor":hexStringToColors("#2E2E2E"),
       "highlightColor" :hexStringToColors("#ffcc00")
     },
 
